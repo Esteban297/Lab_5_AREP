@@ -1,10 +1,10 @@
-FROM openjdk:17
+FROM openjdk:11
 
 WORKDIR /usrapp/bin
 
-ENV PORT 6001
+ENV PORT 6000
 
 COPY /target/classes /usrapp/bin/classes
 COPY /target/dependency /usrapp/bin/dependency
 
-CMD ["java","-cp","./classes:./dependency/*","edu/eci/arep/LoadBalancerServer"]
+CMD ["java","-cp","./classes:./dependency/*","com.eci.arep.Main"]

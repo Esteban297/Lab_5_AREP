@@ -32,6 +32,7 @@ El taller consiste en crear una aplicación web pequeña usando el micro-framewo
 
 ![image](https://user-images.githubusercontent.com/90571387/224220769-71a51a73-a8cd-41d4-91d2-0e48baf53dac.png)
 
+La solución de la arquitectura, está diseñada en dos partes, el frontend "LogService" y el backend "RoundRobinSpark"
 ## Generar Imágenes
 
 
@@ -44,30 +45,24 @@ Despues de compilar el proyecto, utilizamos el siguiente comando para generar la
 ```
 docker-compose up -d
 ```
-![Docker](https://user-images.githubusercontent.com/90571387/224221288-6ffa9e0c-9ee7-4ce0-9b89-7d3c577eeb44.jpg)
+
+Aquí podemos ver el despliegue desde la consola de aws:
+
+![Docker](https://media.discordapp.net/attachments/971608324137177088/1085781055048527902/image.png?width=718&height=410)
 
 
 ## Links
-### Local
-```
-localhost:4567/cadena
-```
 ### AWS
 ```
-http://ec2-100-25-213-232.compute-1.amazonaws.com:34003/cadena
+http://ec2-54-172-15-68.compute-1.amazonaws.com/
 ```
 
 ## Despliegue AWS 
 
-![Docker](https://user-images.githubusercontent.com/90571387/224221096-da3d9329-063a-4d6d-bb65-9da6126b13bc.jpg)
+![Docker](https://media.discordapp.net/attachments/971608324137177088/1085780386094784592/image.png?width=1440&height=575)
 
-![image](https://user-images.githubusercontent.com/90571387/224221446-c7ef2abd-ef45-48e8-894f-ac15fd320de9.png)
+![image](https://media.discordapp.net/attachments/971608324137177088/1085780630446546954/image.png?width=718&height=300)
 
-Insertamos 4 cadenas, para comprobar que el Round Robin funciona validamos con peticiones, en la imagen se ve claramente que ha entrado cuatro veces de forma reaprtida para hacer que sea menos estresante para los servidores.
+## Muestra en Postman
 
-![image](https://user-images.githubusercontent.com/90571387/224223248-5fbc22a3-bf04-463d-a913-bf327c6a8803.png)
-
-![image](https://user-images.githubusercontent.com/90571387/224223470-eb65b52d-b69a-486b-89b4-eef92aa02aed.png)
-
-![image](https://user-images.githubusercontent.com/90571387/224223508-8d830629-6718-4f20-b521-926a70f03b2b.png)
-
+![image](https://media.discordapp.net/attachments/971608324137177088/1085781583195275304/image.png?width=718&height=317)
