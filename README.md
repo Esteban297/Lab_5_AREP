@@ -1,7 +1,6 @@
 # Lab_5_AREP
 
-Este proyecto está basado principalmente en una arquitectura de tipo **Cliente-servidor**, en este caso como servidor cuenta con tres, para poder distribuir la carga se usa **Round Robin** que es un balanceador de carga con el fin de que no se sature un servidor este lo que hace es repartir en tres la carga, para el tema del despliegue se usa **Docker** el cual es capaz de automatizar este proceso usando contenedores. En este caso este se almacena en un servidor **EC2** de **AWS**, para ser desplegado desde este.
-
+El taller consiste en crear una aplicación web pequeña usando el micro-framework de Spark java (http://sparkjava.com/). Una vez tengamos esta aplicación procederemos a construir un container para docker para la aplicación y los desplegaremos y configuraremos en nuestra máquina local. Luego, cerremos un repositorio en DockerHub y subiremos la imagen al repositorio. Finalmente, crearemos una máquina virtual de en AWS, instalaremos Docker , y desplegaremos el contenedor que acabamos de crear.
 
 ## Conceptos Básicos
 
@@ -32,9 +31,6 @@ Este proyecto está basado principalmente en una arquitectura de tipo **Cliente-
 ## Arquitectura
 
 ![image](https://user-images.githubusercontent.com/90571387/224220769-71a51a73-a8cd-41d4-91d2-0e48baf53dac.png)
-
-
-Como podemos ver en la imagen se puede evidenciar fácilmente como se está estructurando, en este caso si no hubiera realizado el **APP-LB-RoundRobin** por medio de un **HttpServer** se podría ver de mejor manera la arquitectura **Cliente-servidor**, este para poder comunicarse con los **LogServices** utiliza peticiones **GET** el cual usa como Framework **Spark**, una vez que es enviada esta información hacia el back este se encarga de almacenarlo dentro de una base de datos no relacional, en este caso estamos usando **MongoDB**, después el back le solicita los datos que tenga para este encargarse de mandar los 10 últimos datos almacenados dentro de la base datos por medio de **JSON** para ser mostrados en el **Frontend**.
 
 ## Generar Imágenes
 
